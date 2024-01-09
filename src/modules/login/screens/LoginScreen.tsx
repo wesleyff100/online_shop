@@ -1,5 +1,11 @@
+import { Background } from '../styles/loginScreen.styles';
+
 const LoginScreen = () => {
-  return <div>Teste</div>;
+  return (
+    <div>
+      <Background src="./background.png" />
+    </div>
+  );
 };
 
 export default LoginScreen;
