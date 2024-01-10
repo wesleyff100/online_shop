@@ -1,13 +1,14 @@
 import { Input as InputAntd, InputProps as InputPropsAntd } from 'antd';
+import { InputHTMLAttributes } from 'react';
 
 import { BoxInput, TitleInput } from './input.styles';
 
-export interface InputProps extends InputPropsAntd {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   title?: string;
   margin?: string;
 }
 
-const Input = ({ title, margin, ...props }: InputProps) => {
+const Input = ({ title, margin, ...props }): InputProps => {
   return (
     <BoxInput style={{ margin }}>
       {title && <TitleInput>{title}</TitleInput>}
